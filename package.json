@@ -1,0 +1,16 @@
+{
+  "name": "sample_react_rails",
+  "version": "1.0.0",
+  "description": "sample react rails app with commonJS save in rails app",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "browserify": "^6.3.4",
+    "browserify-incremental": "^1.5.0",
+    "react": "^16.4.0"
+  },
+  "devDependencies": {},
+  "author": "TQR",
+  "license": "ISC"
+}
