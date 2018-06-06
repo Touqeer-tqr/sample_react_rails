@@ -4,14 +4,22 @@ Integrate React and save Common JS files to rails app:
 
 Gems:
 * react-rails
-
 * browserify-rails
+
+https://mattboldt.com/react-rails-form-refactor/
+https://blog.arkency.com/2015/04/bring-commonjs-to-your-asset-pipeline/
 
 Steps:
 * Add gem react-rails
 * bundle && rails g react:install
 * Add gem browserify-rails
-* Initialize package.json
-	npm init
+* npm init
 * npm install --save 'browserify@~>6.3'
 * npm install --save 'browserify-incremental@^1.4.0'
+* npm install --save react
+* npm install --save redux
+Most likely, you'll also need the React bindings and the developer tools.
+* npm install --save react-redux
+* npm install --save-dev redux-devtools
+
+
