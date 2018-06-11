@@ -170,6 +170,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  babel-transpiler
   browserify-rails
   byebug
   coffee-rails (~> 4.1.0)

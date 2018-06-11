@@ -22,4 +22,5 @@ Most likely, you'll also need the React bindings and the developer tools.
 * npm install --save react-redux
 * npm install --save-dev redux-devtools
 
-
+npm install --save-dev babel-preset-react
+npm install --save babelify
