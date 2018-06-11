@@ -1,30 +1,31 @@
-class Details extends React.Component {
-    constructor(props) {
-      super(props);
-        
-      this.state = {
-         data:[
-            {
-               name: 'First...',
-               id: 1
-            },
-            {
-               name: 'Second...',
-               id: 2
-            },
-            {
-               name: 'Third...',
-               id: 3
-            }
-         ]
-      }
-   }
-    render() {
-        return (
-            <div>
-                <h4>Description</h4>
-            </div>
-        );
-    }
+import { connect } from 'react-redux'
+
+export default class Details extends React.Component {
+  render() {
+    console.log("You clicked on user: asdsddsadasdas");
+    return (
+      <div>
+        <h4>{this.props.user.name}</h4>
+      </div>
+    );
+  }
 }
+
+function mapStateToProps(state) {
+  console.log("You clicked on user: asdsddsadasdas");
+  return {
+    user: state.activeUser
+  };
+}
+
+export default function (state = null, action) {
+  switch (action.type) {
+    case 'USER_SELECTED':
+      return action.payload;
+      break;
+  }
+  return state;
+}
+
+export default connect(mapStateToProps)(Details);
 

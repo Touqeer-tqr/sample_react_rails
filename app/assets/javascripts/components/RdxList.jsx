@@ -1,6 +1,3 @@
-// import React from 'react';
-// import ReactDOM from "react-dom";
-// import { connect } from 'react-redux'
 const selectUser = (user) => {
     console.log("You clicked on user: ", user);
     return {
@@ -15,6 +12,16 @@ const allUsers = (user) => {
         payload: user
     }
 };
+
+const employeesFetch = () => {
+    return (dispatch) => {
+        fetch('https://jsonplaceholder.typicode.com/users').then(response => response.json()).then(json => {
+                var action = { type: 'ALL_USERS', payload: json }
+                dispatch(action)
+            })
+    };
+};
+
 
 class RdxList extends React.Component {
 
@@ -51,8 +58,14 @@ class RdxList extends React.Component {
                 </h4>;
               })}
         </ul>
-        // <h4>zcxc</h4>
-        // <h4 key={user.id} onClick={() => this.props.selectUser(user)}> {user.name} </h4>
     )
   }
 }
+
+// RdxList.propTypes = {
+//   user: React.PropTypes.array,
+// };
+
+// const mapStateToProps = (state) => ({
+//   user: state.notifications.data
+// })
